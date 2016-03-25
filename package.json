@@ -1,0 +1,19 @@
+{
+  "name": "experimental-website",
+  "version": "1.0.0",
+  "description": "Experimental website with SoundCloud API and Web Audio wtih Three.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yangani/Experimental-Website.git"
+  },
+  "author": "Festus Kiprop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yangani/Experimental-Website/issues"
+  },
+  "homepage": "https://github.com/Yangani/Experimental-Website#readme"
+}
