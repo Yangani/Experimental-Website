@@ -9,5 +9,11 @@ var buffer = require('vinyl-buffer')
 var util = require('gulp-util')
 
 gulp.task('js', function () {
-  
+  var bundler = browserify({
+    cache: {},
+    debug: global.isWatching,
+    entries: ['./' + pkg.folders.src + '/js/main.js'],
+    fullPaths: false,
+    packageCache: {}
+  })
 })
