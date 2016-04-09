@@ -19,4 +19,13 @@ gulp.task('js', function () {
     presets: ['es2015']
   }))
 
+  var bundle = function () {
+    bundler
+      .bundle()
+      .pipe(source('main.js'))
+      .pipe(buffer())
+      .pipe(global.isWatching ? util.noop() : uglify())
+      .pipe(gulp.dest('./' + pkg.folders.dist + '/js'))
+  }
+  return bundle()
 })
