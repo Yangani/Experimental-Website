@@ -27,5 +27,11 @@ gulp.task('js', function () {
       .pipe(global.isWatching ? util.noop() : uglify())
       .pipe(gulp.dest('./' + pkg.folders.dist + '/js'))
   }
+
+  if (global.isWatching) {
+    bundler = watchify(bundler)
+    bundler.on('update', bundle)
+  }
+
   return bundle()
 })
