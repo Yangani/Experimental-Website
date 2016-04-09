@@ -15,5 +15,8 @@ gulp.task('js', function () {
     entries: ['./' + pkg.folders.src + '/js/main.js'],
     fullPaths: false,
     packageCache: {}
-  })
+  }).transform(babelify.configure({
+    presets: ['es2015']
+  }))
+
 })
